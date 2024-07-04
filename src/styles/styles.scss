@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$primary-color: hsla(220, 58%, 31%, 1);
+$secondary-color: hsla(180, 60%, 51%, 1);
+$primary-color-medium: hsla(224, 20%, 41%, 1);
+$primary-color-lighter: hsla(220, 58%, 31%, 0.1);
+$primary-bg: hsla(220, 58%, 31%, 0.06);
+$primary-color-light: hsla(224, 20%, 41%, 0.15);
+$grey-color-light: hsla(0, 0%, 100%, 1);
+$danger-color: hsla(345, 97%, 45%, 1);
+$danger-color-light: hsla(345, 97%, 45%, 0.05);
+$warning-color: hsla(46, 100%, 46%, 1);
+$warning-color-light: hsla(46, 100%, 46%, 0.05);
+$success-color: hsla(137, 60%, 51%, 1);
+$success-color-light: hsla(137, 60%, 51%, 0.05);
+$box-shadow: 0 5px 20px
+  rgba(
+    $color: #000000,
+    $alpha: 0.04,
+  );
+
+//FONt SIZE
+$title-large: 2.5rem;
+$title-medium: 1.5rem;
+$body1: 1rem;
+$body2: 0.875rem;
+$body3: 0.75rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", cursive;
+}
+
+button {
+  background-color: $secondary-color;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.logo {
+  padding-left: 4rem;
+  margin-top: 4rem;
+  z-index: 90;
+}
+
+.box {
+  width: 100%;
+  height: 80vh;
+  background-color: $grey-color-light;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $grey-color-light;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding-inline: 6rem;
+  margin: 0 auto;
+
+  h1 {
+    font-size: $title-large;
+    padding-bottom: 1rem;
+    color: $primary-color;
+  }
+
+  span {
+    font-size: $body1;
+    color: $primary-color-medium;
+  }
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.header {
+  height: auto;
+  width: 100%;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 4rem;
+
+  .form-group {
+    position: relative;
+    width: 100%;
+
+    input {
+      width: 100%;
+      padding-block: 1rem;
+      padding-inline: 1rem;
+      font-size: $body2;
+      outline: none;
+      border: 2px solid $primary-color-light;
+      border-radius: 0.3rem;
+      color: $primary-color-medium;
+    }
+
+    span {
+      position: absolute;
+      top: 20%;
+      right: 20px;
+      font-size: $body3;
+      color: $secondary-color;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    p {
+      color: $secondary-color;
+      font-size: $body3;
+      padding-top: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+  }
+  button {
+    width: 100%;
+    padding-block: 1rem;
+    font-size: $body2;
+    font-weight: 600;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 0.3rem;
+    color: $grey-color-light;
+    padding-inline: 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+  }
+}
+.dashboard {
+}
+.nav {
+  background-color: $grey-color-light;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  box-shadow: $box-shadow;
+  z-index: 900;
+
+  .leftNav {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .searchBox {
+      width: 60%;
+      display: flex;
+      align-items: center;
+      background-color: $grey-color-light;
+      border: 1px solid $primary-color-light;
+      border-radius: 0.5rem;
+
+      input {
+        width: 100%;
+        border: none;
+        padding: 0.8rem 1rem;
+        background-color: $grey-color-light;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        outline: none;
+        font-size: $body2;
+      }
+
+      span {
+        padding: 0.8rem 1.5rem;
+        background-color: $secondary-color;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+    }
+  }
+
+  .rightNav {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3rem;
+    margin-right: 2rem;
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      .avatar {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        p {
+          display: flex;
+          align-items: center;
+          font-size: $body1;
+        }
+
+        span {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.aside {
+  min-width: 250px;
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  font-size: $body1;
+  box-shadow: $box-shadow;
+
+  .asideMenu {
+    display: flex;
+    height: auto;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1rem;
+    width: 100%;
+    font-size: $body1;
+    color: $primary-color;
+  }
+  .primaryItem {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+  .secondaryItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    span {
+      font-size: $body3;
+      font-weight: 500;
+      color: $primary-color-medium;
+    }
+  }
+}
+
+.userData {
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .title {
+    font-size: $title-medium;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .title-boxes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: space-between;
+
+    .title-box {
+      padding-left: 2rem;
+      padding-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 240px;
+      height: 160px;
+      font-size: $body2;
+      font-weight: 500;
+      border: 1px solid $primary-color-lighter;
+      border-radius: 0.5rem;
+      box-shadow: $box-shadow;
+      background-color: $grey-color-light;
+
+      .fig {
+        font-size: $title-medium;
+        font-weight: 700;
+      }
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .dataBox {
+    border: 1px solid $primary-bg;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    background-color: $grey-color-light;
+    box-shadow: $box-shadow;
+
+    .users-headers {
+      display: flex;
+      justify-content: space-between;
+      padding-block: 1rem;
+    }
+
+    .users-headers-box p {
+      display: flex;
+      gap: 0.5rem;
+      font-size: $body3;
+      font-weight: 500;
+      color: $primary-color-medium;
+    }
+
+    .data {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $primary-color-lighter;
+      font-size: $body2;
+      color: $primary-color-medium;
+      padding-block: 1.5rem;
+    }
+
+    .data:last-child {
+      border-bottom: 0px;
+    }
+
+    .num,
+    .org,
+    .date {
+      width: 15%;
+    }
+
+    .status,
+    .usr {
+      width: 10%;
+    }
+
+    .email {
+      width: 20%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: $primary-color;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0rem;
+
+  .pagination {
+    display: flex;
+    gap: 0.8rem;
+    list-style: none;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0 0rem;
+    }
+  }
+
+  ul.pagination li a {
+    color: $primary-color-medium;
+    cursor: pointer;
+  }
+
+  ul.pagination li.previous a,
+  ul.pagination li.next a {
+    color: $primary-color;
+    background-color: $primary-color-lighter;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.3rem;
+    font-weight: 500;
+  }
+
+  ul.pagination li.selected a {
+    border-color: transparent;
+    color: $primary-color;
+    min-width: 32px;
+  }
+
+  ul.pagination li.disabled a {
+    color: $primary-color-light;
+  }
+
+  ul.pagination li.disable,
+  ul.pagination li.disabled a {
+    cursor: default;
+  }
+
+  .select-box {
+    display: flex;
+    padding-inline: 1rem;
+    align-items: center;
+  }
+
+  .select {
+    margin-inline: 0.5rem;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: $primary-color-light;
+    border-radius: .2rem;
+    border: none;
+    padding-block: .3rem;
+
+    select{
+      border: none;
+      background-color: transparent;
+      
+    }
+  }
+
+  
+}

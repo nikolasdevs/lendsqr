@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", cursive;
+}
+
+button {
+  background-color: hsl(180, 60%, 51%);
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.logo {
+  padding-left: 4rem;
+  margin-top: 4rem;
+  z-index: 90;
+}
+
+.box {
+  width: 100%;
+  height: 80vh;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding-inline: 6rem;
+  margin: 0 auto;
+}
+.form h1 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  color: hsl(220, 58%, 31%);
+}
+.form span {
+  font-size: 1rem;
+  color: hsl(224, 20%, 41%);
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.header {
+  height: auto;
+  width: 100%;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 4rem;
+}
+form .form-group {
+  position: relative;
+  width: 100%;
+}
+form .form-group input {
+  width: 100%;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  font-size: 0.875rem;
+  outline: none;
+  border: 2px solid hsla(224, 20%, 41%, 0.15);
+  border-radius: 0.3rem;
+  color: hsl(224, 20%, 41%);
+}
+form .form-group span {
+  position: absolute;
+  top: 20%;
+  right: 20px;
+  font-size: 0.75rem;
+  color: hsl(180, 60%, 51%);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+form .form-group p {
+  color: hsl(180, 60%, 51%);
+  font-size: 0.75rem;
+  padding-top: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+form button {
+  width: 100%;
+  padding-block: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 0.3rem;
+  color: hsl(0, 0%, 100%);
+  padding-inline: 1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.nav {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  z-index: 900;
+}
+.nav .leftNav {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav .leftNav .searchBox {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsla(224, 20%, 41%, 0.15);
+  border-radius: 0.5rem;
+}
+.nav .leftNav .searchBox input {
+  width: 100%;
+  border: none;
+  padding: 0.8rem 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  outline: none;
+  font-size: 0.875rem;
+}
+.nav .leftNav .searchBox span {
+  padding: 0.8rem 1.5rem;
+  background-color: hsl(180, 60%, 51%);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.nav .rightNav {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 3rem;
+  margin-right: 2rem;
+}
+.nav .rightNav .profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav .rightNav .profile .avatar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav .rightNav .profile .avatar p {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+.nav .rightNav .profile .avatar span {
+  margin-left: 0.5rem;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.aside {
+  min-width: 250px;
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  font-size: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+.aside .asideMenu {
+  display: flex;
+  height: auto;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  color: hsl(220, 58%, 31%);
+}
+.aside .primaryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+.aside .secondaryItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.aside .secondaryItem span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(224, 20%, 41%);
+}
+
+.userData {
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.userData .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.userData .title-boxes {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.userData .title-boxes .title-box {
+  padding-left: 2rem;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 240px;
+  height: 160px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid hsla(220, 58%, 31%, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  background-color: hsl(0, 0%, 100%);
+}
+.userData .title-boxes .title-box .fig {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.userData .title-boxes img {
+  width: 40px;
+  height: 40px;
+}
+.userData .dataBox {
+  border: 1px solid hsla(220, 58%, 31%, 0.06);
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+.userData .dataBox .users-headers {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+.userData .dataBox .users-headers-box p {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(224, 20%, 41%);
+}
+.userData .dataBox .data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsla(220, 58%, 31%, 0.1);
+  font-size: 0.875rem;
+  color: hsl(224, 20%, 41%);
+  padding-block: 1.5rem;
+}
+.userData .dataBox .data:last-child {
+  border-bottom: 0px;
+}
+.userData .dataBox .num,
+.userData .dataBox .org,
+.userData .dataBox .date {
+  width: 15%;
+}
+.userData .dataBox .status,
+.userData .dataBox .usr {
+  width: 10%;
+}
+.userData .dataBox .email {
+  width: 20%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: hsl(220, 58%, 31%);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0rem;
+}
+.pagination-container .pagination {
+  display: flex;
+  gap: 0.8rem;
+  list-style: none;
+}
+.pagination-container .pagination ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0 0rem;
+}
+.pagination-container ul.pagination li a {
+  color: hsl(224, 20%, 41%);
+  cursor: pointer;
+}
+.pagination-container ul.pagination li.previous a,
+.pagination-container ul.pagination li.next a {
+  color: hsl(220, 58%, 31%);
+  background-color: hsla(220, 58%, 31%, 0.1);
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.3rem;
+  font-weight: 500;
+}
+.pagination-container ul.pagination li.selected a {
+  border-color: transparent;
+  color: hsl(220, 58%, 31%);
+  min-width: 32px;
+}
+.pagination-container ul.pagination li.disabled a {
+  color: hsla(224, 20%, 41%, 0.15);
+}
+.pagination-container ul.pagination li.disable,
+.pagination-container ul.pagination li.disabled a {
+  cursor: default;
+}
+.pagination-container .select-box {
+  display: flex;
+  padding-inline: 1rem;
+  align-items: center;
+}
+.pagination-container .select {
+  margin-inline: 0.5rem;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: hsla(224, 20%, 41%, 0.15);
+  border-radius: 0.2rem;
+  border: none;
+  padding-block: 0.3rem;
+}
+.pagination-container .select select {
+  border: none;
+  background-color: transparent;
+}

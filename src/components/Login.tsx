@@ -19,14 +19,14 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="form">
+        <div className="form-container">
           <div className="form-container">
             <div className="header">
               <h1>Welcome! </h1>
               <span>Enter details to login.</span>
             </div>
 
-            <form>
+            <form className="form">
               <div className="form-group">
                 <input placeholder="Email" type="text" />
               </div>

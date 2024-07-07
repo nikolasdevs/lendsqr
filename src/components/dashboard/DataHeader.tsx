@@ -1,20 +1,24 @@
-import React from "react";
-import filter from "../../assets/filter-results-button.png";
+import React, { useState } from "react";
+import filter from "../../assets/filter-results-button.svg";
 
 interface HeaderBoxProps {
   title: string;
   className?: string;
+  onFilterClick: () => void;
+  isFilterOpen: boolean;
 }
 
-const DataHeader: React.FC<HeaderBoxProps> = ({ title, className }) => (
-  <div className={`users-headers-box ${className}`}>
-    <p>
-      {title}{" "}
-      <span>
-        <img src={filter} alt="filter" />
-      </span>
-    </p>
-  </div>
-);
+const DataHeader: React.FC<HeaderBoxProps> = ({ title, className,onFilterClick, isFilterOpen }) => {
+  return (
+    <div className={`users-headers-box ${className}`}>
+      <p>
+        {title}{" "}
+        <span onClick={onFilterClick}>
+          <img src={filter} alt="filter" />
+        </span>
+      </p>
+    </div>
+  );
+};
 
 export default DataHeader;

@@ -1,9 +1,9 @@
 import React from "react";
 import logo from "../../assets/logo.svg";
-import icon from "../../assets/SearchVector.png";
-import notification from "../../assets/notificationVector.png";
-import avatar from "../../assets/avatar.png";
-import dropdown from "../../assets/dropdownVector.png";
+import icon from "../../assets/searchVector.svg";
+import notification from "../../assets/np_notification_ 1.svg";
+import avatar from "../../assets/avatar.svg";
+import dropdown from "../../assets/dropdownVector.svg";
 
 const Header = () => {
   return (

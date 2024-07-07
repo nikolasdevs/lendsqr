@@ -1,25 +1,25 @@
 import * as React from "react";
 
-import usersFriends from "../../assets/user-friends1.png";
-import guarantors from "../../assets/users1.png";
-import loans from "../../assets/sack1.png";
-import decision from "../../assets/handshake-regular1.png";
-import savings from "../../assets/piggy-bank1.png";
-import loanRequests from "../../assets/loanRequest.png";
-import whitelist from "../../assets/user-check1.png";
-import karma from "../../assets/user-times1.png";
-import switchOrg from "../../assets/briefcase1.png";
-import dashboard from "../../assets/home1.png";
-import npBank from "../../assets/np_bank_1.png";
-import fees from "../../assets/coins-solid1.png";
-import transaction from "../../assets/transaction.png";
-import services from "../../assets/galaxy1.png";
-import account from "../../assets/user-cog1.png";
-import settlement from "../../assets/scroll1.png";
-import report from "../../assets/chart-bar2.png";
-import preferences from "../../assets/sliders-h.png";
-import pricing from "../../assets/badge-percent.png";
-import audit from "../../assets/clipboard-list.png";
+import usersFriends from "../../assets/user-friends1.svg";
+import guarantors from "../../assets/users1.svg";
+import loans from "../../assets/sack1.svg";
+import decision from "../../assets/handshake-regular1.svg";
+import savings from "../../assets/piggy-bank1.svg";
+import loanRequests from "../../assets/loanRequest.svg";
+import whitelist from "../../assets/user-check1.svg";
+import karma from "../../assets/user-times1.svg";
+import switchOrg from "../../assets/briefcase1.svg";
+import dashboard from "../../assets/home.svg";
+import npBank from "../../assets/np_bank1.svg";
+import fees from "../../assets/coins-solid1.svg";
+import transaction from "../../assets/transaction.svg";
+import services from "../../assets/galaxy1.svg";
+import account from "../../assets/user-cog1.svg";
+import settlement from "../../assets/scroll1.svg";
+import report from "../../assets/chart-bar2.svg";
+import preferences from "../../assets/sliders-h1.svg";
+import pricing from "../../assets/badge-percent1.svg";
+import audit from "../../assets/clipboard-list1.svg";
 
 import { Link } from "react-router-dom";
 
@@ -32,7 +32,7 @@ export const MainListItems = (
           <p>Switch Organization</p>
         </div>
       </Link>
-      <Link to="/guarantors">
+      <Link to="/dashboard">
         <div className="asideMenu">
           <img src={dashboard} alt="" />
           <p>Dashboard</p>

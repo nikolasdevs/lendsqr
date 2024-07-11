@@ -22,6 +22,7 @@ $box-shadow: 0 5px 20px
 //FONt SIZE
 $title-large: 2.5rem;
 $title-medium: 1.5rem;
+$title-small: 1.375rem;
 $body1: 1rem;
 $body2: 0.875rem;
 $body3: 0.75rem;
@@ -44,130 +45,139 @@ button {
   border: none;
 }
 
-.container {
+.mainContainer {
+  max-width: 1440px;
   margin: 0 auto;
-  width: 1440px;
+}
+
+.container {
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: start;
-}
-
-.logo {
-  padding-left: 4rem;
-  margin-top: 4rem;
-  z-index: 90;
+  justify-content: center;
+  padding: 3rem;
 }
 
 .box {
   width: 100%;
-  height: 80vh;
-  background-color: $grey-color-light;
-  display: flex;
-  align-items: center;
-}
-
-.left {
-  width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: $grey-color-light;
-}
 
-.form {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  padding-inline: 6rem;
-  margin: 0 auto;
+  .left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $grey-color-light;
 
-  h1 {
-    font-size: $title-large;
-    padding-bottom: 1rem;
-    color: $primary-color;
-  }
-
-  span {
-    font-size: $body1;
-    color: $primary-color-medium;
-  }
-}
-
-.form-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-.header {
-  height: auto;
-  width: 100%;
-}
-
-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding-top: 4rem;
-
-  .form-group {
-    position: relative;
-    width: 100%;
-
-    input {
+    img {
       width: 100%;
-      padding-block: 1rem;
-      padding-inline: 1rem;
-      font-size: $body2;
-      outline: none;
-      border: 2px solid $primary-color-light;
-      border-radius: 0.3rem;
-      color: $primary-color-medium;
+    }
+  }
+
+  .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding-inline: 4rem;
+    margin: 0 auto;
+
+    h1 {
+      font-size: $title-large;
+      padding-bottom: 1rem;
+      color: $primary-color;
     }
 
     span {
-      position: absolute;
-      top: 20%;
-      right: 20px;
-      font-size: $body3;
-      color: $secondary-color;
-      font-weight: 600;
-      letter-spacing: 2px;
+      font-size: $body1;
+      color: $primary-color-medium;
     }
 
-    p {
-      color: $secondary-color;
-      font-size: $body3;
-      padding-top: 1.5rem;
-      font-weight: 600;
-      letter-spacing: 2px;
+    .form-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      .header {
+        height: auto;
+        width: 100%;
+      }
+
+      .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-top: 4rem;
+
+        .form-group {
+          position: relative;
+          width: 100%;
+
+          input {
+            width: 100%;
+            padding-block: 1rem;
+            padding-inline: 1rem;
+            font-size: $body2;
+            outline: none;
+            border: 2px solid $primary-color-light;
+            border-radius: 0.3rem;
+            color: $primary-color-medium;
+          }
+
+          span {
+            position: absolute;
+            top: 20%;
+            right: 20px;
+            font-size: $body3;
+            color: $secondary-color;
+            font-weight: 600;
+            letter-spacing: 2px;
+          }
+
+          p {
+            color: $secondary-color;
+            font-size: $body3;
+            padding-top: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+          }
+        }
+        button {
+          width: 100%;
+          padding-block: 1rem;
+          font-size: $body2;
+          font-weight: 600;
+          letter-spacing: 2px;
+          outline: none;
+          border-radius: 0.3rem;
+          color: $grey-color-light;
+          padding-inline: 1rem;
+          margin-top: 1.5rem;
+          cursor: pointer;
+        }
+      }
     }
   }
-  button {
-    width: 100%;
-    padding-block: 1rem;
-    font-size: $body2;
-    font-weight: 600;
-    letter-spacing: 2px;
-    outline: none;
-    border-radius: 0.3rem;
-    color: $grey-color-light;
-    padding-inline: 1rem;
-    margin-top: 1.5rem;
-    cursor: pointer;
-  }
 }
+
+.mainDashboard {
+}
+
 .dashboard {
+  width: 100%;
+  height: auto;
 }
 .nav {
-  background-color: $grey-color-light;
   width: 100%;
   height: auto;
   display: flex;
@@ -176,12 +186,17 @@ form {
   padding: 1.5rem 2rem;
   box-shadow: $box-shadow;
   z-index: 900;
+  // background-color: aqua;
 
   .leftNav {
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .logo{
+      cursor: pointer;
+    }
 
     .searchBox {
       width: 60%;
@@ -233,6 +248,7 @@ form {
           display: flex;
           align-items: center;
           font-size: $body1;
+          cursor: pointer;
         }
 
         span {
@@ -240,6 +256,12 @@ form {
         }
       }
     }
+    .docs:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    
   }
 }
 
@@ -247,16 +269,15 @@ form {
   width: 100%;
   height: auto;
   display: flex;
-  gap: 1rem;
 }
 
 .aside {
-  min-width: 250px;
-  width: 25%;
+  padding-inline: 1rem;
+  width: 20%;
   height: auto;
   display: flex;
   flex-direction: column;
-  padding-left: 2rem;
+  align-items: center;
   font-size: $body1;
   box-shadow: $box-shadow;
 
@@ -298,6 +319,7 @@ form {
   gap: 3rem;
 
   .title {
+    width: 100%;
     font-size: $title-medium;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -306,10 +328,10 @@ form {
   .title-boxes {
     width: 100%;
     height: auto;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: space-between;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 
     .title-box {
       padding-left: 2rem;
@@ -317,7 +339,7 @@ form {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      width: 240px;
+      width: 100%;
       height: 160px;
       font-size: $body2;
       font-weight: 500;
@@ -340,83 +362,360 @@ form {
 
   .dataBox {
     border: 1px solid $primary-bg;
-    padding: 1rem 2.5rem;
     border-radius: 0.5rem;
     background-color: $grey-color-light;
     box-shadow: $box-shadow;
+    padding: 2rem;
 
     .users-headers {
       display: flex;
       justify-content: space-between;
+      align-items: start;
       padding-block: 1rem;
+      width: 100%;
+    }
+
+    .invincible {
+      background-color: #000000;
+      width: 5%;
+      visibility: hidden;
     }
 
     .users-headers-box p {
       display: flex;
       gap: 0.5rem;
-      font-size: $body3;
+      font-size: $body2;
       font-weight: 500;
+
       color: $primary-color-medium;
     }
 
     .data {
-      width: 100%;
       display: flex;
-      justify-content: space-between;
+      gap: 0.5rem;
+      padding-block: 1rem;
       border-bottom: 1px solid $primary-color-lighter;
-      font-size: $body2;
-      color: $primary-color-medium;
-      padding-block: 1.5rem;
-    }
-
-    .data:last-child {
-      border-bottom: 0px;
     }
 
     .num,
-    .org,
     .date {
       width: 15%;
     }
 
-    .status,
-    .usr {
-      width: 10%;
+    .org,
+    .usr,
+    .status {
+      width: 12%;
+    }
+
+    .menu-icon {
+      text-align: center;
+    }
+    .status_all {
+      padding: 1rem 0rem;
+      border-radius: 2rem;
     }
 
     .email {
-      width: 20%;
+      width: 25%;
+    }
+
+    .status-active {
+      color: $success-color;
+      background-color: $success-color-light;
+      text-align: center;
+    }
+
+    .status-inactive {
+      color: $primary-color-medium;
+      background-color: rgba(84, 95, 125, 0.061);
+      text-align: center;
+    }
+
+    .status-pending {
+      color: $warning-color;
+      text-align: center;
+      background-color: $warning-color-light;
+      text-align: center;
+    }
+    .status-blacklisted {
+      color: $danger-color;
+
+      background-color: $danger-color-light;
+      text-align: center;
     }
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.userDetails {
+  .main-details {
+    display: flex;
+
+    .details-container {
+      margin-top: 3rem;
+      margin-left: 3rem;
+      width: 100%;
+
+      .backIcon {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .detailsHeader {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-block: 1.5rem;
+        justify-content: space-between;
+
+        p {
+          font-size: $title-medium;
+        }
+
+        .ctaBtn {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          button {
+            background-color: transparent;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: $body2;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+          }
+          .blacklist {
+            border: 1px solid $danger-color;
+            color: $danger-color;
+          }
+
+          .activate {
+            border: 1px solid $secondary-color;
+            color: $secondary-color;
+          }
+        }
+      }
+      .profileHeader {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4rem;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        background-color: $grey-color-light;
+        box-shadow: $box-shadow;
+
+        .top {
+          display: flex;
+          align-items: center;
+          gap: 3rem;
+
+          .profileImg {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            .profileName {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+
+              font-size: $body2;
+
+              :first-child {
+                font-size: $title-small;
+                text-transform: capitalize;
+                font-weight: 500;
+              }
+            }
+          }
+
+          .profileStar {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            border-inline: 1px solid $primary-color-lighter;
+            padding-inline: 3rem;
+            padding-block: 1rem;
+
+            font-size: $body3;
+            font-weight: 500;
+          }
+
+          .profileAccount {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            p {
+              font-size: $title-small;
+              font-weight: 500;
+            }
+
+            .accountDetails {
+              display: flex;
+              p {
+                font-size: $body3;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        .bottom {
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            padding-inline: 2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+          }
+          :hover {
+            color: $secondary-color;
+            border-bottom: 2px solid $secondary-color;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .profileInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+
+        .personalInfo {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          border-bottom: 1px solid $primary-color-lighter;
+          padding-bottom: 2rem;
+          gap: 2rem;
+
+          .personalInfoHeader {
+            font-weight: 500;
+            color: $primary-color-medium;
+          }
+
+          .personalInfoBox {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .personalInfoBox1 {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              gap: 8rem;
+
+              .info {
+                width: 10%;
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                .title {
+                  color: $primary-color-medium;
+                  text-transform: uppercase;
+                  font-size: $body3;
+                }
+
+                :last-child {
+                  font-weight: 500;
+                  color: $primary-color-medium;
+                }
+              }
+              .email {
+                width: 12%;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.filters {
+  position: absolute;
+  border: 1px solid hsla(224, 20%, 41%, 0.14);
+  background-color: $grey-color-light;
+  padding: 1rem 1rem;
+  width: 20%;
+  border-radius: 0.5rem;
+  z-index: 99;
 
-.App-link {
-  color: $primary-color;
-}
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+
+      input,
+      select {
+        padding: 0.8rem;
+        border-radius: 0.5rem;
+        border: 1px solid hsla(220, 58%, 31%, 0.2);
+
+        outline: none;
+        font-size: $body2;
+        color: $primary-color-medium;
+      }
+
+      .date-input {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 0.5rem;
+        border: 1px solid hsla(220, 58%, 31%, 0.2);
+        padding-right: 0.8rem;
+
+        input {
+          width: 100%;
+          border: none;
+        }
+      }
+    }
+
+    .btn {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      button {
+        padding: 0.8rem 1.5rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .reset {
+        background-color: $grey-color-light;
+        color: $primary-color-medium;
+        border: 1px solid $primary-color-medium;
+      }
+    }
   }
 }
 
@@ -479,16 +778,97 @@ form {
     display: flex;
     justify-content: center;
     background-color: $primary-color-light;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     border: none;
-    padding-block: .3rem;
+    padding-block: 0.3rem;
 
-    select{
+    select {
       border: none;
       background-color: transparent;
-      
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+
+    .box {
+      .right {
+        padding-inline: 1rem;
+      }
     }
   }
 
-  
+  .userData {
+    padding: 1rem;
+
+    .title-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .data {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .email,
+    .date,
+    .usr {
+      display: none;
+    }
+  }
+
+  .asideMenu {
+    p {
+      display: none;
+    }
+  }
+
+  .secondaryItem {
+    span {
+      display: none;
+    }
+  }
+  .userData {
+    .dataBox {
+      .data,
+      .users-headers {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    background-color: #000000;
+  }
+
+  .box {
+    .right {
+      padding-inline: 1rem;
+      width: 100%;
+    }
+    .left {
+      display: none;
+    }
+  }
+  .userData {
+    .dataBox {
+      padding-inline: 0.5rem;
+    }
+    .title-boxes {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .num {
+      display: none;
+    }
+  }
+  .pagination-container {
+    .select-box {
+      display: none;
+    }
+  }
 }

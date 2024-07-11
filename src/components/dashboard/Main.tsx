@@ -14,7 +14,7 @@ interface User {
   organization: string;
   username: string;
   email: string;
-  phoneNum: string;
+  phoneNumber: string;
   dateJoined: string;
   status: "active" | "inactive" | "pending" | "blacklisted";
   hasLoan: boolean;
@@ -54,7 +54,7 @@ const Main = () => {
           setLoading(false);
         } else {
           const response = await fetch(
-            "https://run.mocky.io/v3/9d1249cf-7b7b-439a-b436-602c3bcee2cd"
+            "https://run.mocky.io/v3/d949e5fb-50bf-4d84-b5da-8b3a2f3dee43"
           );
           const data = await response.json();
           await clearUsersFromDB();
@@ -224,6 +224,12 @@ const Main = () => {
             onFilterClick={toggleFilterPopup}
             isFilterOpen={isFilterOpen}
           />
+          <DataHeader
+            title="STATUS"
+            className="invincible"
+            onFilterClick={toggleFilterPopup}
+            isFilterOpen={isFilterOpen}
+          />
         </div>
 
         {isFilterOpen && (
@@ -241,7 +247,7 @@ const Main = () => {
               organization={user.organization}
               username={user.username}
               email={user.email}
-              phoneNumber={user.phoneNum}
+              phoneNumber={user.phoneNumber}
               dateJoined={user.dateJoined}
               status={user.status}
             />

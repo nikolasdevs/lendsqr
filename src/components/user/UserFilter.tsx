@@ -6,7 +6,7 @@ interface FilterPopupProps {
   onApply: (filters: FilterCriteria) => void;
   onClose: () => void;
 
-  // onClear: () => void;
+
 }
 
 interface FilterCriteria {
@@ -30,11 +30,7 @@ const UserFilter: React.FC<FilterPopupProps> = ({
   const [phoneNumber, setPhoneNumber] = useState("");
   const [status, setStatus] = useState("");
 
-  // useEffect(() => {
-  //   if (!isOpen) {
-  //     handleReset();
-  //   }
-  // }, [isOpen]);
+
   useEffect(() => {
     if (!isOpen) {
       setOrganization("");

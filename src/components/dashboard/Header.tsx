@@ -4,12 +4,15 @@ import icon from "../../assets/searchVector.svg";
 import notification from "../../assets/np_notification_ 1.svg";
 import avatar from "../../assets/avatar.svg";
 import dropdown from "../../assets/dropdownVector.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="nav">
       <div className="leftNav">
-        <img src={logo} alt="" />
+        <Link to={'/'}>
+          <img src={logo} alt="" className="logo" />
+        </Link>
         <div className="searchBox">
           <input placeholder="Search for anything" type="text" />
           <span>
